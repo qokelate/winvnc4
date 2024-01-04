@@ -1,0 +1,83 @@
+  TcpSocket, SMsgWriter, SVncAuth, WMPoller, WMCopyRect, DIBSectionBuffer, SConnection, KeyRemapper, VNCSConnST, SSecurityFactoryStandard, Cursor, PixelBuffer, SDisplayCoreWMHooks, SDisplayCorePolling, WMMonitor, SInput, MonitorInfo, DeviceContext, DeviceFrameBuffer, Clipboard, UpdateTracker, TsSessions, WMCursor, CleanDesktop, WMHooks, SecurityWin32, WMShatter, Registry, DynamicFn, EventManager, RegConfig, Connections, VNCServerST, SDisplay, CurrentUser, AboutDialog, MsgWindow, Threading, Service, PropSheet, Dialog, Config, SocketManager, HTTPServer, main, VNCServerWin32, STrayIcon, QueryConnectDialog, ManagedListener, JavaViewerServer
+Global Parameters:
+  MaxCutText - Maximum permitted length of an incoming clipboard update
+               (default=262144)
+  ZlibLevel  - Zlib compression level (default=-1)
+  PollConsoleWindows - Server should poll console windows for updates
+               (default=1)
+  RemapKeys  - Comma-separated list of incoming keysyms to remap.  Mappings are
+               expressed as two hex values, prefixed by 0x, and separated by ->
+               (default=)
+  BlacklistTimeout - The initial timeout applied when a host is first
+               black-listed.  The host cannot re-attempt a connection until the
+               timeout expires. (default=10)
+  BlacklistThreshold - The number of unauthenticated connection attempts
+               allowed from any individual host before that host is
+               black-listed (default=5)
+  QueryConnect - Prompt the local user to accept or reject incoming
+               connections. (default=0)
+  SendCutText - Send clipboard changes to clients. (default=1)
+  AcceptCutText - Accept clipboard updates from clients. (default=1)
+  AcceptPointerEvents - Accept pointer press and release events from clients.
+               (default=1)
+  AcceptKeyEvents - Accept key press and release events from clients.
+               (default=1)
+  DisconnectClients - Disconnect existing clients if an incoming connection is
+               non-shared. If combined with NeverShared then new connections
+               will be refused while there is a client active (default=1)
+  NeverShared - Never treat incoming connections as shared, regardless of the
+               client-specified setting (default=0)
+  AlwaysShared - Always treat incoming connections as shared, regardless of the
+               client-specified setting (default=0)
+  Protocol3.3 - Always use protocol version 3.3 for backwards compatibility
+               with badly-behaved clients (default=0)
+  CompareFB  - Perform pixel comparison on framebuffer to reduce unnecessary
+               updates (default=1)
+  ClientWaitTimeMillis - The number of milliseconds to wait for a client which
+               is no longer responding (default=20000)
+  IdleTimeout - The number of seconds after which an idle VNC connection will
+               be dropped (zero means no timeout) (default=3600)
+  Password   - Obfuscated binary encoding of the password which clients must
+               supply to access the server (default=)
+  PasswordFile - Password file for VNC authentication (default=)
+  ReverseSecurityTypes - Specify encryption scheme to use for reverse
+               connections (None) (default=None)
+  SecurityTypes - Specify which security scheme to use for incoming connections
+               (None, VncAuth) (default=VncAuth)
+  DeadKeyAware - Whether to assume the viewer has already interpreted dead key
+               sequences into latin-1 characters (default=1)
+  UseCaptureBlt - Use a slower capture method that ensures that alpha blended
+               windows appear correctly (default=1)
+  DisableEffects - Disable desktop user interface effects when the server is in
+               use. (default=0)
+  RemovePattern - Remove the desktop background pattern when the server is in
+               use. (default=0)
+  RemoveWallpaper - Remove the desktop wallpaper when the server is in use.
+               (default=0)
+  DisplayDevice - Display device name of the monitor to be remoted, or empty to
+               export the whole desktop. (default=)
+  DisconnectAction - Action to perform when all clients have disconnected. 
+               (None, Lock, Logoff) (default=None)
+  DisableLocalInputs - Disable local keyboard and pointer input while the
+               server is in use (default=0)
+  UpdateMethod - How to discover desktop updates; 0 - Polling, 1 - Application
+               hooking, 2 - Driver hooking. (default=1)
+  Log        - Specifies which log output should be directed to which target
+               logger, and the level of output to log. Format is
+               <log>:<target>:<level>[, ...]. (default=)
+  QueryOnlyIfLoggedOn - Only prompt for a local user to accept incoming
+               connections if there is a user logged on (default=0)
+  LocalHost  - Only accept connections from via the local loop-back network
+               interface (default=0)
+  Hosts      - Filter describing which hosts are allowed access to this server
+               (default=+0.0.0.0/0.0.0.0)
+  PortNumber - TCP/IP port on which the server will accept connections
+               (default=5900)
+  HTTPPortNumber - TCP/IP port on which the server will serve the Java applet
+               VNC Viewer  (default=5800)
+  DisableClose - Disable the Close entry in the VNC Server tray menu.
+               (default=0)
+  DisableOptions - Disable the Options entry in the VNC Server tray menu.
+               (default=0)
+  QueryConnectTimeout - Number of seconds to show the Accept Connection dialog
+               before rejecting the connection (default=10)
